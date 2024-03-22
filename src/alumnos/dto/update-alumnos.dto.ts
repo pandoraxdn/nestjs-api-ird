@@ -11,7 +11,7 @@ export class UpdateAlumnos{
     @MaxLength(255)
     @MinLength(3)
     @IsOptional()
-    nombre: string;
+    nombre:     string;
 
     @IsString()
     @MaxLength(255)
@@ -26,20 +26,24 @@ export class UpdateAlumnos{
     ap_materno: string;
 
     @IsString()
-    @MaxLength(255)
-    @MinLength(3)
     @IsOptional()
-    matricula: string;
+    image:      string;
 
     @IsString()
     @MaxLength(255)
     @MinLength(3)
     @IsOptional()
-    carrera: string;
+    matricula:  string;
+
+    @IsString()
+    @MaxLength(255)
+    @MinLength(3)
+    @IsOptional()
+    carrera:    string;
 
     @IsString()
     @MaxLength(255)
     @MinLength(8)
     @IsOptional()
-    password: string;
+    password:   string;
 }

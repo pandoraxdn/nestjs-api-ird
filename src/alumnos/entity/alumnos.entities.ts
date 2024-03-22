@@ -4,10 +4,10 @@ import { Entity, Column, PrimaryGeneratedColumn } from 'typeorm';
 export class Alumnos{
 
     @PrimaryGeneratedColumn()
-    id_alumno: number;
+    id_alumno:  number;
 
     @Column()
-    nombre: string;
+    nombre:     string;
 
     @Column()
     ap_paterno: string;
@@ -15,13 +15,16 @@ export class Alumnos{
     @Column()
     ap_materno: string;
 
-    @Column()
-    matricula: string;
+    @Column({ type: 'text' })
+    image:      string;
 
     @Column()
-    carrera: string;
+    matricula:  string;
 
     @Column()
-    password: string;
+    carrera:    string;
+
+    @Column()
+    password:   string;
 }
 

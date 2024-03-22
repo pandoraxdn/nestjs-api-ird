@@ -9,7 +9,7 @@ export class CreateAlumnos{
     @IsString()
     @MaxLength(255)
     @MinLength(3)
-    nombre: string;
+    nombre:     string;
 
     @IsString()
     @MaxLength(255)
@@ -22,14 +22,17 @@ export class CreateAlumnos{
     ap_materno: string;
 
     @IsString()
-    @MaxLength(255)
-    @MinLength(3)
-    matricula: string;
+    image:      string;
 
     @IsString()
     @MaxLength(255)
     @MinLength(3)
-    carrera: string;
+    matricula:  string;
+
+    @IsString()
+    @MaxLength(255)
+    @MinLength(3)
+    carrera:    string;
 
     @IsString()
     @MaxLength(255)
