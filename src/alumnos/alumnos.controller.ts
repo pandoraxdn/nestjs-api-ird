@@ -19,6 +19,11 @@ export class AlumnosController {
         private alumnosService: AlumnosService
     ){}
 
+    @Post('login')
+    async login( @Body( new ValidationPipe() ) updateAlumno: UpdateAlumnos ){
+        return await this.alumnosService.login( updateAlumno );
+    }
+
     @Post()
     async create( @Body( new ValidationPipe() ) createAlumno: CreateAlumnos ){
         return await this.alumnosService.create( createAlumno );
