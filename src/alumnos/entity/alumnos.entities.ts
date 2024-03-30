@@ -1,4 +1,5 @@
 import { Entity, Column, PrimaryGeneratedColumn } from 'typeorm';
+//import { Accesos } from './accesos.entities';
 
 @Entity()
 export class Alumnos{
@@ -26,5 +27,6 @@ export class Alumnos{
 
     @Column()
     password:   string;
+
 }
 

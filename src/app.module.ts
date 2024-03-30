@@ -4,6 +4,7 @@ import { AppService } from './app.service';
 import { AlumnosModule } from './alumnos/alumnos.module';
 import { TypeOrmModule } from '@nestjs/typeorm';
 import { Alumnos } from './alumnos/entity/alumnos.entities';
+import { Accesos } from './alumnos/entity/accesos.entities';
 
 @Module({
   imports: [
@@ -15,7 +16,7 @@ import { Alumnos } from './alumnos/entity/alumnos.entities';
         username: 'najimi',
         password: 'pass',
         database: 'universidad',
-        entities: [ Alumnos ],
+        entities: [ Alumnos, Accesos ],
         synchronize: true, // false no recomendable en producción
         autoLoadEntities: true
       }),

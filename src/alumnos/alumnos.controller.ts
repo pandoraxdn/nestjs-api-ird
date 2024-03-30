@@ -11,6 +11,7 @@ import {
 import { AlumnosService } from './alumnos.service';
 import { CreateAlumnos } from './dto/create-alumnos.dto';
 import { UpdateAlumnos } from './dto/update-alumnos.dto';
+import { CreateAccesos } from './dto/create-accesos.dto';
 
 @Controller('alumnos')
 export class AlumnosController {
@@ -22,6 +23,16 @@ export class AlumnosController {
     @Post('login')
     async login( @Body( new ValidationPipe() ) updateAlumno: UpdateAlumnos ){
         return await this.alumnosService.login( updateAlumno );
+    }
+
+    @Post('register-access')
+    async registerAccess( @Body( new ValidationPipe() ) createAcceso: CreateAccesos ){
+        return await this.alumnosService.registerAccess( createAcceso );
+    }
+
+    @Get('list-access')
+    async listAccess(){
+        return await this.alumnosService.listAccess();
     }
 
     @Post()
