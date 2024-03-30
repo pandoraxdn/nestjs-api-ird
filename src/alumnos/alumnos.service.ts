@@ -35,6 +35,16 @@ export class AlumnosService {
         return await this.accesosRepository
             .createQueryBuilder('accesos')
             .innerJoinAndSelect('accesos.alumnos', 'alumnos')
+            /*
+            .select("accesos.id_acceso")
+            .addSelect("accesos.fecha_ingreso")
+            .addSelect("alumnos.nombre")
+            .addSelect("alumnos.ap_paterno")
+            .addSelect("alumnos.ap_materno")
+            .addSelect("alumnos.matricula")
+            .addSelect("alumnos.carrera")
+            .addSelect("alumnos.image")
+            */
             .getMany();
     }
 
